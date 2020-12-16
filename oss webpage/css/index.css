@@ -30,6 +30,9 @@ nav ul{
     padding: 24px 0px;
     height: 70vh;
     clip-path: circle(10% at 10% 5%); 
+    position: fixed;
+    top:0;
+    left:0;
 }
  nav ul.active{
     clip-path: circle(100% at -45% 10%);
@@ -151,12 +154,102 @@ nav ul li:hover{
     text-align: center;
 }
 .footer{
-    height: 300px;
-     width: 100vw;
-     display: flex;
-     align-content: center;
-     justify-content: center;
+    height: 400px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     background-color: #e3edf7;
 }
+.social-media{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+}
+a{
+    display: flex;
+    background-color: #e3edf7;
+    width: 75px;
+    height: 75px;
+    margin: 0 15px;
+    border-radius: 8px;
+    align-items:center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),-6px -6px 10px -1px rgba(255,255,255,0.7);
+    transition: transform 0.5s;
+}
+a i{
+    font-size: 35px;
+    color: #777;
+    transition: transform .5s;
+}
+a:hover{
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+    inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+    -0.5px -0.5px 0px rgba(255,255,255,1),
+    0.5px 0.5px 0px rgba(0,0,0,0.15),
+    0px 12px 10px -10px rgba(0,0,0,0.5);
+    border:1px solid (0,0,0,0.1);
+    transform: translateY(2px);
+}
+a:hover{
+    transform: scale(0.9);
+}
+a:hover .fa-facebook{
+   color:  #3b5698;
+}
+a:hover .fa-linkedin{
+    color:  #00acee;
+ }
+ a:hover .fa-whatsapp{
+    color:  #4fce5d;
+ }
+ a:hover .fa-instagram{
+    color:  #c32aa3;
+ }
+ a:hover .fa-github{
+    color:  rgba(0,0,0);
+ }
+ 
+.wrapper{
+    margin: 50px;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spann{
+    font-size: 2.5rem;
+    text-align: center;
+    padding:10px;
+    color: #171717;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.5rem;
+    font-weight: 500;
+    text-shadow: 0 0.3rem 0.5rem rgba(0,0,0,0.3);
+    position: relative;
+    left: 50%;
+}
+.spann::before{
+    content: '';
+    animation: animate infinite 8s;
+}
+@keyframes animate{
+    0%{
+        content: 'We Innovate';
+    }
+    50%{
+        content: 'We Create';
+    }
+    100%{
+        content: 'We make it better';
+    }
+}
+
 
 
 
