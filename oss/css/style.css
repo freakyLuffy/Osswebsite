@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    overflow-x: hidden;
+}
+
+body {
+    scroll-behavior: smooth;
+    background-color: #fff;
+    width: 100%;    
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a,
+p,
+.display-6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.display-light {
+    font-family: 'Montserrat', sans-serif;
+}
+.top-container{
+    height: 100vh;
+}
+.middle-container h1,h2{
+    padding:3px;
+    text-align: center;
+}
+/*.main-img{
+    height: 25rem;
+    width: 25rem;
+}*/
+
+.text-main {
+    color: #694ea1;
+}
+
+.bg-main {
+    background-color: #694ea1;
+}
+
+.bg-main:hover,
+.bg-main:active,
+.bg-main:focus {
+    background-color: #694ea1;
+}
+
+.bg-light-main {
+    background-color: white;
+}
+#team {
+   font-size: 14px;
+   font-weight: 400;
+   color: #777;
+}
+#team h1{
+    font-size: 36px;
+    color:#555;
+    font-weight: bold;
+}
+#team h3{
+    font-weight: bold;
+    font-size: 24px;
+    color: #333;
+}
+#team i{
+     font-size: 26px;
+     color: #555;
+}
+#team p{
+    font-weight: 500;
+}
+#team-card{
+    border-radius: 0;
+    box-shadow: 5px 5px 15px red;
+    transition: all .3 ease-in;
+    -webkit-transition:  all .3 ease-in;
+    -moz-transition: all .3 ease-in; 
+}
+#card-body{
+    box-shadow: 5px 5px 3px #694ea1!important;
+}
+#team .card:hover{
+    background: #694ea1;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 5px 5px 10px #9E9E9E;
+}
+#team .card:hover h3,#team .card:hover i{
+    color: #fff;
+}
+@media (max-width: 320px) {
+    .display-4 {
+        font-size: 2.7rem;
+    }
+
+    .fa.fa-github {
+        display: none;
+    }
+}
+
+@media (max-width: 270px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    .fa.fa-github {
+        display: none;
+    }
+}
