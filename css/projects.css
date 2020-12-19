@@ -1,0 +1,93 @@
+/* Import */
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+/* Basic Reset */
+* {  
+  font-smoothing: antialiased;
+  margin: 0; padding: 0;
+}
+body { 
+  background: #33322f; 
+  overflow-x: hidden; 
+}
+
+/* Gallery */
+.gallery { 
+  position: relative; 
+  width: 610px; height: 306px; 
+  margin-left: 50px; 
+  overflow: hidden; 
+  list-style: none;
+}
+.gallery img { 
+  display: block; 
+  float: left; 
+}
+.gallery ul {
+  list-style: none;
+}
+.gallery ul li.each { 
+  position: relative; 
+  float: left;
+  transition: all .8s; 
+}
+.gallery ul li.each, .gallery ul li.each img { 
+  height: 0px; 
+}
+.gallery ul li.each img { 
+  opacity: 0.5; 
+  transition: all .4s; 
+}
+.gallery ul li.each.active, .gallery ul li.each.active img { 
+  height: 306px; 
+}
+.gallery ul li.each.active img { 
+  opacity: 1; 
+}
+.gallery .caption { 
+  position: absolute;
+  bottom: 0; 
+  left: 20px; right: 20px;
+  text-transform: uppercase;
+}
+
+.gallery .caption h2, .gallery .caption p {
+  background: #fff000; 
+  padding: 7px;
+  box-shadow: 0 0 20px #000;
+}
+.gallery .caption h2 {
+  font: 24px "Lato", sans-serif;
+  float: left;
+}
+.gallery .caption p {
+  font: 18px "Lato", sans-serif;
+  float: left;
+  clear: both;
+}
+
+/* Direction */
+.direction { 
+  position: absolute; 
+  top: 50%; margin-top: -74px; 
+  right: -100px;
+  background: lightgrey;
+  width: 158px; height: 158px;
+  display: block;
+  transform: rotate(45deg); 
+  z-index: 9999;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+}
+.direction .next {
+  position: absolute;
+  top: 90px; left: 25px;
+  color: #808080;
+  font: 40px "Lato", sans-serif;
+  text-shadow:
+    0 1px #ccc,
+    0 2px #ccc,
+    0 3px #ccc,
+    0 4px #ccc;
+  transform: rotate(-45deg);
+  cursor: pointer;
+}
