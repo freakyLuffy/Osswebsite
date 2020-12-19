@@ -9,7 +9,7 @@ html, body { background: #333 url("https://codepen.io/images/classy_fabric.png")
 .events{
   font-weight: bold;
   font-size: 2.2rem;
-  text-align: center;
+  margin-left: 20rem;
 }
 
 
@@ -19,7 +19,7 @@ html, body { background: #333 url("https://codepen.io/images/classy_fabric.png")
     width: 38rem;
     height: 26.25rem;
     display: block;
-    margin: 0 auto;
+    margin-left: 3rem;
     position: relative;
 }
 
@@ -141,6 +141,7 @@ html, body { background: #333 url("https://codepen.io/images/classy_fabric.png")
   font-weight: bold;
   font-size: 2.2rem;
   text-align: center;
+  margin-left: 0px;
 }
 
 
