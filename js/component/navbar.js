@@ -5,14 +5,7 @@ window.document.write(`
                 <img src="./img/OSS-LOGO.jpeg" height="40" width="auto">
                 <span class="ml-3 text-dark">Team OSS</span>
             </a>
-            <div class="d-flex align-items-center">
-                <a href="issues.html" class="text-dark px-3 d-none d-md-block">
-                    Open Issues
-                </a>
-                <a href="https://github.com/learn-opensource" class="text-dark" target="_blank">
-                    <i class="fa fa-github fa-2x px-2"></i>
-                </a>
-            </div>
+            
         </div>
     </nav>
 `);
