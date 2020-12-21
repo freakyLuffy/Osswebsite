@@ -10,66 +10,1305 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <style>
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        .numbertext {
+            margin-bottom: 50px;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: -1%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 30%;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev {
+            left: 30%;
+            border-radius: 3px 0 0 3px;
+        }
+
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
 </head>
 
 <body>
     <!--script that adds the navbar-->
     <script src="./js/component/navbar.js"></script>
-    <nav>
-        <ul>
-            <div class="menu">
-                <span></span>
-                <span></span>
-                <span></span>
+    <div class="top-container">
+        <!--landup page here!-->
+        <div class="bg-light-main">
+            <div class="container py-5">
+                <div class="d-flex row align-items-center justify-items-center mh-100">
+                    <div class="col-sm-12 col-md-7 px-5 mt-3">
+                        <h1 class="display-4 font-weight-light" data-aos="fade-in" data-aos-delay="100">
+                            <span class="text-main font-weight-bold">O</span>pen
+                            <span class="text-main font-weight-bold">S</span>ource
+                            <span class="text-main font-weight-bold">S</span>oftware
+                        </h1>
+                        <h4 class="my-3 display-5 display-light d-none d-md-block" data-aos="fade-bottom"
+                            data-aos-delay="300">
+                            <strong>RESEARCH AND DEVELOPMENT</strong>
+                        </h4>
+                        <p class="lead font-weight-light" data-aos="fade-in" data-aos-delay="600">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dolor libero, porttitor
+                            efficitur nulla mattis, dignissim elementum enim.
+                        </p>
+                        <a href="./resources.html" target="_blank" data-aos-delay="800" data-aos="fade-bottom">
+                            <button
+                                class="btn btn-primary shadow text-decoration-none btn-link px-5 py-3 mt-3 rounded-0 border-0 text-white bg-main">
+                                Register
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-sm-12 col-md-5" data-aos="fade-left">
+                        <img class="main-img img-fluid d-none d-md-block" src="./img/Untitled.svg">
+                    </div>
+                </div>
             </div>
-            <li>Home</li>
-            <li>Domains</li>
-            <li>Projects</li>
-            <li>Contact Us</li>
+        </div>
+        <div>
+            <img class="main-img img-fluid d-none d-md-block" src="./img/content-hero.svg">
+        </div>
+    </div>
+
+    <section id="technology">
+        <div class="row mb-5">
+            <div class="col">
+                <h1>Our Domains</h1>
+            </div>
+        </div>
+        <div class="about-container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="./img/web-development.jpg">
+                        </div>
+                        <div class="con">
+                            <h2>WEB DEVELOPMENT</h2>
+                            <p>websites are the basic requirements for any business,plays a major role in digital
+                                market.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="./img/app development.jpg">
+                        </div>
+                        <div class="con">
+                            <h2>APP DEVELOPMENT</h2>
+                            <p>Mobile app development is the act or process by which a MobileApp is developed for
+                                devices. created.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="./img/ml1.jpg">
+                        </div>
+                        <div class="con">
+                            <h2>MACHINE LEARNING</h2>
+                            <p>Machine learning is the science of getting computers to act without being explicitly
+                                programmed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="fac">
+        <div class="container my-3 py-5 text-center">
+            <div class="row mb-5">
+                <div class="col">
+                    <h1>Faculty</h1>
+                </div>
+            </div>
+            <div class="container p-3">
+                <div class="row">
+                    <div class="col-6 col-md-4">
+                        <div class="card mb-3">
+                            <div class="card-img"
+                                style="background-image:url(https://placeimg.com/350/480/any/grayscale?t=1527110912130);">
+                            </div>
+                            <div class="card-img-overlay d-flex flex-column justify-content-between">
+                                <h4 class="card-title">Title Here</h4>
+                                <h4>2013</h4>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="card mb-3">
+                            <div class="card-img"
+                                style="background-image:url(https://placeimg.com/350/480/any/grayscale?t=1527110912130);">
+                            </div>
+                            <div class="card-img-overlay d-flex flex-column justify-content-between">
+                                <h4 class="card-title">Title Here</h4>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="card mb-3">
+                            <div class="card-img"
+                                style="background-image:url(https://placeimg.com/350/480/any/grayscale?t=1527110912130);">
+                            </div>
+                            <div class="card-img-overlay d-flex flex-column justify-content-between">
+                                <h4 class="card-title">Title Here</h4>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="card mb-3">
+                            <div class="card-img"
+                                style="background-image:url(https://placeimg.com/350/480/any/grayscale?t=1527110912130);">
+                            </div>
+                            <div class="card-img-overlay d-flex flex-column justify-content-between">
+                                <h4 class="card-title">Title Here</h4>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 mb-3">
+                        <div class="card">
+                            <div class="card-img"
+                                style="background-image:url(https://placeimg.com/350/480/any/grayscale?t=1526043407634);">
+                            </div>
+                            <div class="card-img-overlay d-flex flex-column justify-content-between">
+                                <h4 class="card-title">Title Here</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="eventdiv">
+
+        <div class="events">
+            <p><span style="color: #694EA1">P</span>rojects</p>
+        </div>
+        <ul class="slides">
+            <input type="radio" name="radio-btn" id="img-1" checked />
+            <li class="slide-container">
+                <div class="slide">
+                    <img src="./img/bg1.png" />
+                </div>
+                <div class="nav">
+                    <label for="img-6" class="prev" style="margin-bottom: 0px;">&#x2039;</label>
+                    <label for="img-2" class="next" style="margin-bottom: 0px;">&#x203a;</label>
+                </div>
+            </li>
+
+            <input type="radio" name="radio-btn" id="img-2" />
+            <li class="slide-container">
+                <div class="slide">
+                    <img src="./img/ml.jpg" />
+                </div>
+                <div class="nav">
+                    <label for="img-1" class="prev">&#x2039;</label>
+                    <label for="img-3" class="next">&#x203a;</label>
+                </div>
+            </li>
+
+            <input type="radio" name="radio-btn" id="img-3" />
+            <li class="slide-container">
+                <div class="slide">
+                    <img src="https://jpeg.org/images/jpeg-home.jpg" />
+                </div>
+                <div class="nav">
+                    <label for="img-2" class="prev">&#x2039;</label>
+                    <label for="img-4" class="next">&#x203a;</label>
+                </div>
+            </li>
+
+            <input type="radio" name="radio-btn" id="img-4" />
+            <li class="slide-container">
+                <div class="slide">
+                    <img src="https://jpeg.org/images/jpeg-home.jpg" />
+                </div>
+                <div class="nav">
+                    <label for="img-3" class="prev">&#x2039;</label>
+                    <label for="img-5" class="next">&#x203a;</label>
+                </div>
+            </li>
+
+            <input type="radio" name="radio-btn" id="img-5" />
+            <li class="slide-container">
+                <div class="slide">
+                    <img src="https://jpeg.org/images/jpeg-home.jpg" />
+                </div>
+                <div class="nav">
+                    <label for="img-4" class="prev">&#x2039;</label>
+                    <label for="img-6" class="next">&#x203a;</label>
+                </div>
+            </li>
+
+            <input type="radio" name="radio-btn" id="img-6" />
+            <li class="slide-container">
+                <div class="slide">
+                    <img src="https://jpeg.org/images/jpeg-home.jpg" />
+                </div>
+                <div class="nav">
+                    <label for="img-5" class="prev">&#x2039;</label>
+                    <label for="img-1" class="next">&#x203a;</label>
+                </div>
+            </li>
+         
+            <li class="nav-dots">
+                <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+                <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+                <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+                <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+                <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+                <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+            </li>
         </ul>
-        <div class="img">
-            <img src="images/download.png" alt="logo">
+    </div>
+    <div class="gallerys" id="gallerys">
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,care" alt=""></div>
         </div>
-    </nav>
-    <!--landup page here!-->
-    <div class="container" style="height: 100vh;">
-    <div class="bg-light-main">
-        <div class="container py-5">
-            <div class="d-flex row align-items-center justify-items-center mh-100">
-                <div class="col-sm-12 col-md-7 px-5 mt-3">
-                    <h1 class="display-4 font-weight-light" data-aos="fade-in" data-aos-delay="100">
-                        <span class="text-main font-weight-bold">O</span>pen
-                        <span class="text-main font-weight-bold">S</span>ource
-                        <span class="text-main font-weight-bold">S</span>oftware
-                    </h1>
-                    <h4 class="my-3 display-5 display-light d-none d-md-block" data-aos="fade-bottom"
-                        data-aos-delay="300">
-                        <strong>RESEARCH AND DEVELOPMENT</strong></h4>
-                    <p class="lead font-weight-light" data-aos="fade-in" data-aos-delay="600">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dolor libero, porttitor efficitur nulla mattis, dignissim elementum enim. 
-                    </p>
-                    <a href="./resources.html" target="_blank" data-aos-delay="800" data-aos="fade-bottom">
-                        <button
-                            class="btn btn-primary shadow text-decoration-none btn-link px-5 py-3 mt-3 rounded-0 border-0 text-white bg-main">
-                            Read More
-                        </button>
-                    </a>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,studied" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/5551.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/5439.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="https://source.unsplash.com/random/?tech,past" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/31709.jpg" alt=""></div>
+          </div>
+  
+</div>
+    <!-- <section id= "Events" class="events">
+        <div class="container">                        
+            <div class="row">
+                <div class="text-center col-12 col-sm-12 col-md-12 col-lg-12 my-4">
+                    <h1 style="color: black">OSS EVENTS</h1>
+                </div> -->
+    <!-- <div class="text-center scroll col-12 col-sm-12 col-md-6 col-lg-6">
+                    <img class="avatar lazy" src="./img/event.png" alt="">
+                </div> -->
+    <!-- <div class="scroll col-12 col-sm-12 col-md-6 col-lg-6 mt-4">
+                    <div class="slider">
+                        <div class="slide current">
+                          <div class="contents">
+                            <img class="main-img img-fluid d-none d-md-block" src="./img/1.jpg">
+                            
+                          </div>
+                        </div>
+                        <div class="slide">
+                          <div class="contents">
+                            <img class="main-img img-fluid d-none d-md-block" src="./img/2.jpg">
+                            
+                          </div>
+                        </div>
+                        <div class="slide">
+                          <div class="contents">
+                            <img class="main-img img-fluid d-none d-md-block" src="./img/team.jpg">
+                            
+                          </div>
+                        </div>
+                        <div class="slide">
+                          <div class="contents">
+                            <img class="main-img img-fluid d-none d-md-block" src="./img/ml1.jpg">
+                            
+                          </div>
+                        </div>
+                        <div class="slide">
+                          <div class="contents">
+                            <img class="main-img img-fluid d-none d-md-block" src="./img/ml.jpg">
+                            
+                          </div>
+                        </div>
+                        </div>
+
+                      <div class="buttons">
+                        <button id="prev"><i class="fas fa-arrow-left"></i></button>
+                        <button id="next"><i class="fas fa-arrow-right"></i></button>
+                      </div>
                 </div>
-                <div class="col-sm-12 col-md-5" data-aos="fade-left">
-                    <img class="main-img img-fluid d-none d-md-block" src="./img/Untitled.svg">
+            </div> 
+        </div>
+    </section> -->
+
+    <section id="team">
+        <div class="container my-3 py-5 text-center">
+            <div class="bg row mb-5">
+                <div class="col">
+                    <h1>Our team</h1>
+                </div>
+            </div>
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <h3 class="numbertext session mt-3">2017-2021</h3>
+                    <div class="row">
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/team.jpg" alt="" class="img-fluid rounded-cicle w-50 mb-3">
+                                    <h3>shivi</h3>
+                                    <h5>web</h5>
+
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <i class="fa fa-twitter"></i>
+                                            <a href="#">
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/team.jpg" alt="" class="img-fluid rounded-cicle w-50 mb-3">
+                                    <h3>anushka</h3>
+                                    <h5>web developer</h5>
+
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/team.jpg" alt="" class="img-fluid rounded-cicle w-50 mb-3">
+                                    <h3>vikhyat</h3>
+                                    <h5>web developer</h5>
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/team.jpg" alt="" class="img-fluid rounded-cicle w-50 mb-3">
+                                    <h3>anushka</h3>
+                                    <h5>web developer</h5>
+
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/team.jpg" alt="" class="img-fluid rounded-cicle w-50 mb-3">
+                                    <h3>anushka</h3>
+                                    <h5>web developer</h5>
+
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/team.jpg" alt="" class="img-fluid rounded-cicle w-50 mb-3">
+                                    <h3>anushka</h3>
+                                    <h5>web developer</h5>
+
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/team.jpg" alt="" class="img-fluid rounded-cicle w-50 mb-3">
+                                    <h3>anushka</h3>
+                                    <h5>web developer</h5>
+
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/team.jpg" alt="" class="img-fluid rounded-cicle w-50 mb-3">
+                                    <h3>anushka</h3>
+                                    <h5>web developer</h5>
+
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <h3 class="numbertext session mt-3">2018-2022</h3>
+                    <div class="row">
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/team.jpg" alt="" class="img-fluid rounded-cicle w-50 mb-3">
+                                    <h3>anu</h3>
+                                    <h5>web</h5>
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/team.jpg" alt="" class="img-fluid rounded-cicle w-50 mb-3">
+                                    <h3>anushka</h3>
+                                    <h5>web developer</h5>
+
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/team.jpg" alt="" class="img-fluid rounded-cicle w-50 mb-3">
+                                    <h3>vikhyat</h3>
+                                    <h5>web developer</h5>
+
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/team.jpg" alt="" class="img-fluid rounded-cicle w-50 mb-3">
+                                    <h3>anushka</h3>
+                                    <h5>web developer</h5>
+
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/team.jpg" alt="" class="img-fluid rounded-cicle w-50 mb-3">
+                                    <h3>anushka</h3>
+                                    <h5>web developer</h5>
+
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/team.jpg" alt="" class="img-fluid rounded-cicle w-50 mb-3">
+                                    <h3>anushka</h3>
+                                    <h5>web developer</h5>
+
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/team.jpg" alt="" class="img-fluid rounded-cicle w-50 mb-3">
+                                    <h3>anushka</h3>
+                                    <h5>web developer</h5>
+
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/5551.jpg" alt="" class="img-fluid rounded-cicle w-50 mb-3">
+                                    <h3>anushka</h3>
+                                    <h5>web developer</h5>
+
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="mySlides">
+                    <h3 class="numbertext session mt-3">2019-2023</h3>
+                    <div class="row">
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/4760073.jpg" alt="" class="img-fluid rounded-cicle w-50 mb-3">
+                                    <h3>anu</h3>
+                                    <h5>web</h5>
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/5551.jpg" alt="" class="img-fluid rounded-cicle w-50 mb-3">
+                                    <h3>anushka</h3>
+                                    <h5>web developer</h5>
+
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/4760073.jpg" alt="" class="img-fluid rounded-cicle w-50 mb-3">
+                                    <h3>vikhyat</h3>
+                                    <h5>web developer</h5>
+
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="img/5551.jpg" alt="" class="img-fluid rounded-cicle w-50 mb-3">
+                                    <h3>anushka</h3>
+                                    <h5>web developer</h5>
+
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </div>
+                                        <div class="p-4">
+                                            <a href="#">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <section id="alumni">
+        <div class="faculty">
+            <h1><span>A</span>lumni</h1>
+        </div>
+        <div class="middle">
+            <div class="containers">
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="containers">
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="containers">
+
+
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="content">
+                        <div class="header">
+                            <img src="3840.jpg" alt="shivi">
+                            <div class="infos">
+                                <h3 class="name">Shivangi</h3>
+                                <p class="title">Web Developer / We Desinger</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div>
-        <img class="main-img img-fluid d-none d-md-block" src="./img/content-hero.svg">
-    </div>
-    </div>
+    </section>
 
-    
-
-    <!--benefits section via static script-->
-    <!-- <script src="./js/component/benefits.js"></script> -->
 
     <!--footer-->
     <footer class="footer">
@@ -79,12 +1318,51 @@
             <a href="#"><i class="fab fa-whatsapp"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-github"></i></a>
-         </div>
-        <h1>&copy <span>O</span>SS <span>R</span>&D <span>C</span>enter, <span>W</span>eb <span>D</span>evelopment <span>T</span>eam</h1>
+        </div>
+        <h1>&copy <span>O</span>SS <span>R</span>&D <span>C</span>enter, <span>W</span>eb <span>D</span>evelopment
+            <span>T</span>eam
+        </h1>
         <div class="wrapper">
-        <span class="spann"></span>
+            <span class="spann"></span>
         </div>
     </footer>
+
+    <script src="main.js"></script>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+
+    <!--benefits section via static script-->
+    <!-- <script src="./js/component/benefits.js"></script> -->
+
+    <!--footer-->
     <!-- <script src="./js/component/footer.js"></script> -->
 
     <!--scripts-->
@@ -93,7 +1371,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
-    </script>
+        </script>
     <script type="module" src="./js/main.js"></script>
     <script>
         AOS.init({
