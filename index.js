@@ -5,7 +5,7 @@ var router = express.Router();
 //var db=require('./db');
 let app=express();
 let mongoose=require('mongoose');
-let url="mongodb+srv://freakyluffy:Himanshu@2000@cluster0.vd8zb.mongodb.net/user?retryWrites=true&w=majority";
+let url="mongodb+srv://freakyluffy:<pass>@cluster0.vd8zb.mongodb.net/user?retryWrites=true&w=majority";
 mongoose.connect(url,{useNewUrlParser:true,useUnifiedTopology:true});
 let conn=mongoose.connection;
 conn.on('error',console.error.bind(console,'Connection Error!'));
